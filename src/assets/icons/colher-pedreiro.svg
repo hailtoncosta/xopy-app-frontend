@@ -1,0 +1,19 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Handle (cabo laranja) -->
+  <ellipse cx="380" cy="120" rx="25" ry="80" transform="rotate(45 380 120)" fill="#D97706"/>
+  <ellipse cx="380" cy="120" rx="18" ry="70" transform="rotate(45 380 120)" fill="#EA580C"/>
+  
+  <!-- Metal ferrule (conexão metal) -->
+  <ellipse cx="320" cy="180" rx="12" ry="25" transform="rotate(45 320 180)" fill="#6B7280"/>
+  
+  <!-- Trowel blade (lâmina da colher) -->
+  <path d="M280 220 L180 320 L180 380 C180 390 185 400 195 405 L205 410 C215 415 225 415 235 410 L380 340 C390 335 395 325 395 315 L395 255 C395 245 390 235 380 230 L320 200 C310 195 300 195 290 200 L280 220 Z" fill="#9CA3AF"/>
+  
+  <!-- Blade highlight -->
+  <path d="M285 225 L185 325 L185 375 C185 382 188 388 195 392 L200 395 C205 398 212 398 218 395 L350 335 C357 332 362 325 362 318 L362 265 C362 258 357 252 350 248 L315 230 C308 227 302 227 295 230 L285 225 Z" fill="#D1D5DB"/>
+  
+  <!-- Handle grip lines -->
+  <line x1="365" y1="105" x2="375" y2="115" stroke="#B45309" stroke-width="2"/>
+  <line x1="375" y1="115" x2="385" y2="125" stroke="#B45309" stroke-width="2"/>
+  <line x1="385" y1="125" x2="395" y2="135" stroke="#B45309" stroke-width="2"/>
+</svg>

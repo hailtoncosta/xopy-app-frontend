@@ -1,0 +1,37 @@
+<svg width="112" height="128" viewBox="0 0 112 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo branco para a parte superior -->
+  <rect x="0" y="0" width="112" height="64" fill="white"/>
+  
+  <!-- Fundo laranja para a parte inferior -->
+  <rect x="0" y="64" width="112" height="64" fill="#ea580c"/>
+  
+  <!-- Figura do pedreiro centralizada -->
+  <g transform="translate(56, 64)">
+    <!-- Corpo do pedreiro -->
+    <ellipse cx="0" cy="-20" rx="18" ry="25" fill="#4a5568"/>
+    
+    <!-- Cabeça -->
+    <circle cx="0" cy="-35" r="12" fill="#f7fafc"/>
+    
+    <!-- Capacete -->
+    <path d="M -12 -42 Q 0 -48 12 -42 L 12 -35 Q 0 -32 -12 -35 Z" fill="#fbbf24"/>
+    
+    <!-- Braços -->
+    <ellipse cx="-15" cy="-15" rx="6" ry="15" fill="#f7fafc" transform="rotate(-20)"/>
+    <ellipse cx="15" cy="-15" rx="6" ry="15" fill="#f7fafc" transform="rotate(20)"/>
+    
+    <!-- Ferramenta (colher de pedreiro) na mão direita -->
+    <g transform="translate(20, -10) rotate(30)">
+      <rect x="0" y="-2" width="15" height="4" fill="#8b5cf6" rx="2"/>
+      <rect x="12" y="-1" width="8" height="2" fill="#6b46c1"/>
+    </g>
+    
+    <!-- Pernas -->
+    <ellipse cx="-8" cy="10" rx="5" ry="18" fill="#2d3748"/>
+    <ellipse cx="8" cy="10" rx="5" ry="18" fill="#2d3748"/>
+    
+    <!-- Botas -->
+    <ellipse cx="-8" cy="25" rx="7" ry="5" fill="#1a202c"/>
+    <ellipse cx="8" cy="25" rx="7" ry="5" fill="#1a202c"/>
+  </g>
+</svg>

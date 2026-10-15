@@ -1,0 +1,19 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64 64H448V128H64V64Z" fill="currentColor"/>
+  <path d="M96 128H416V192H96V128Z" fill="currentColor"/>
+  <path d="M128 192H384V256H128V192Z" fill="currentColor"/>
+  <path d="M160 256H352V320H160V256Z" fill="currentColor"/>
+  <path d="M192 320H320V384H192V320Z" fill="currentColor"/>
+  <path d="M224 384H288V448H224V384Z" fill="currentColor"/>
+  <path d="M240 448H272V512H240V448Z" fill="currentColor"/>
+  <path d="M32 32H96V96H32V32Z" fill="currentColor"/>
+  <path d="M416 32H480V96H416V32Z" fill="currentColor"/>
+  <path d="M112 160H144V192H112V160Z" fill="currentColor"/>
+  <path d="M368 160H400V192H368V160Z" fill="currentColor"/>
+  <path d="M144 224H176V256H144V224Z" fill="currentColor"/>
+  <path d="M336 224H368V256H336V224Z" fill="currentColor"/>
+  <path d="M176 288H208V320H176V288Z" fill="currentColor"/>
+  <path d="M304 288H336V320H304V288Z" fill="currentColor"/>
+  <path d="M208 352H240V384H208V352Z" fill="currentColor"/>
+  <path d="M272 352H304V384H272V352Z" fill="currentColor"/>
+</svg>

@@ -1,0 +1,593 @@
+[
+  {
+    "id": "TC001",
+    "title": "User Registration with Valid Data",
+    "description": "Verify that a new user can successfully register using valid information and receives a UUID-based user ID.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the user registration page."
+      },
+      {
+        "type": "action",
+        "description": "Input valid registration details including email, password, and required personal info."
+      },
+      {
+        "type": "action",
+        "description": "Submit the registration form."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm registration success message is displayed."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the new user ID is a valid UUID and no timestamps are used."
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Login with Correct Credentials",
+    "description": "Ensure users and admins can login successfully with valid credentials and that session persists.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page."
+      },
+      {
+        "type": "action",
+        "description": "Enter valid username/email and password."
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that login is successful and session is established."
+      },
+      {
+        "type": "assertion",
+        "description": "Reload the application and check session persistence."
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Login Failure with Invalid Credentials",
+    "description": "Verify that login fails gracefully with invalid username or password.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page."
+      },
+      {
+        "type": "action",
+        "description": "Enter an invalid username/email or incorrect password."
+      },
+      {
+        "type": "action",
+        "description": "Attempt to submit the login form."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm an error message is displayed indicating incorrect credentials."
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Browse Product Categories and Filters",
+    "description": "Verify users can browse product categories and apply search filters to narrow down product listings.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to product categories page."
+      },
+      {
+        "type": "action",
+        "description": "Select a product category."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify list of products under the selected category is displayed."
+      },
+      {
+        "type": "action",
+        "description": "Apply multiple search filters (price range, brand, rating)."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm product list updates according to filters applied."
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "View Product Details",
+    "description": "Ensure the product detail page displays all relevant information including images, descriptions, and rental options if applicable.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "From product listings, select a specific product."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify detailed product information is shown, including title, images, description, price, and rental availability."
+      },
+      {
+        "type": "assertion",
+        "description": "Check that related products or recommendations are displayed."
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Add and Remove Items from Shopping Cart",
+    "description": "Verify adding multiple products and rentals to the shopping cart and ability to remove or update quantities.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Select a product and add it to the shopping cart."
+      },
+      {
+        "type": "action",
+        "description": "Add a rental item to the cart."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm both items are visible in the cart with correct pricing and quantities."
+      },
+      {
+        "type": "action",
+        "description": "Update quantity for one item."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the updated quantity reflects correctly in the cart total."
+      },
+      {
+        "type": "action",
+        "description": "Remove one item from the cart."
+      },
+      {
+        "type": "assertion",
+        "description": "Check the item is removed and totals are recalculated."
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Complete Checkout and Order Creation",
+    "description": "Ensure the user can complete the checkout process and an order record is created and reflected in order management.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the shopping cart page with items added."
+      },
+      {
+        "type": "action",
+        "description": "Proceed to checkout page."
+      },
+      {
+        "type": "action",
+        "description": "Fill in required shipping and payment information."
+      },
+      {
+        "type": "action",
+        "description": "Submit the order."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm order success message and order ID."
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the orders page."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the new order appears with correct details and status."
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Create, Edit, and Delete User Advertisements",
+    "description": "Test user flows for creating, modifying, and deleting product or rental advertisements.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to 'My Ads' management page."
+      },
+      {
+        "type": "action",
+        "description": "Create a new ad with valid product/rental details and media uploads."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the new ad is listed and visible."
+      },
+      {
+        "type": "action",
+        "description": "Select an existing ad and perform edit updates."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the changes are saved and displayed correctly."
+      },
+      {
+        "type": "action",
+        "description": "Delete the ad."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the ad is removed from the list."
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Dynamic Content Loading and Fallback Mechanism",
+    "description": "Verify banners, categories, and product content load dynamically from Supabase and fallback to static data if backend unavailable.",
+    "category": "error handling",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Load the home page with Supabase backend services available."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm dynamic banners, categories, and products display correctly from the backend."
+      },
+      {
+        "type": "action",
+        "description": "Simulate backend service unavailability."
+      },
+      {
+        "type": "action",
+        "description": "Reload the home page."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify content falls back to predefined static banners, categories, and products without errors."
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Admin Panel CRUD Operations",
+    "description": "Ensure admins can create, read, update, and delete products, users, orders, banners, and settings with UI updates reflecting changes.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Admin logs into the admin dashboard."
+      },
+      {
+        "type": "action",
+        "description": "Navigate to products management and create a new product."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the new product appears in the product list."
+      },
+      {
+        "type": "action",
+        "description": "Edit an existing product's details."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the product details update correctly."
+      },
+      {
+        "type": "action",
+        "description": "Delete a product."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure the product no longer appears in the list."
+      },
+      {
+        "type": "action",
+        "description": "Repeat create, update, and delete tests for users, orders, banners, and settings."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify all changes reflect correctly in the UI and backend."
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Real-Time Chat Message Sending and Receiving",
+    "description": "Verify users can send and receive real-time chat messages instantly with proper storage and retrieval.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "User A opens a conversation with User B."
+      },
+      {
+        "type": "action",
+        "description": "User A sends a text message."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm User B receives the message instantly."
+      },
+      {
+        "type": "action",
+        "description": "User B replies to User A."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify User A receives the reply instantly."
+      },
+      {
+        "type": "assertion",
+        "description": "Check chat history is persisted and loads correctly on conversation reload."
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "User Profile and Settings Update",
+    "description": "Ensure users can update their profile data, addresses, payment methods, and notification settings successfully.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to user profile settings."
+      },
+      {
+        "type": "action",
+        "description": "Update personal information fields."
+      },
+      {
+        "type": "action",
+        "description": "Add a new address and update payment methods."
+      },
+      {
+        "type": "action",
+        "description": "Modify notification preferences."
+      },
+      {
+        "type": "action",
+        "description": "Save all changes."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm all updates persist and reflect throughout the system."
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Favorites Management and Persistence",
+    "description": "Test that users can add and remove products to/from favorites and that the state persists across sessions.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to a product detail page."
+      },
+      {
+        "type": "action",
+        "description": "Add product to favorites."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the product appears in the favorites list."
+      },
+      {
+        "type": "action",
+        "description": "Remove the product from the favorites list."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the product is removed from favorites."
+      },
+      {
+        "type": "action",
+        "description": "Logout and log back in."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure favorites list state persists correctly."
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "Dark/Light Theme Switching",
+    "description": "Verify that users can toggle between dark and light themes and that the preference is persisted and applied offline.",
+    "category": "ui",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Locate and activate theme toggle control."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the UI theme changes immediately."
+      },
+      {
+        "type": "action",
+        "description": "Refresh the page and check if the selected theme persists."
+      },
+      {
+        "type": "action",
+        "description": "Test theme switching while offline using PWA offline mode."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify theme preference still applies correctly."
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "PWA Installation and Offline Functionality",
+    "description": "Test that the platform functions as a Progressive Web App with proper install prompting, offline access, and synchronization upon reconnect.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Visit the platform on supported browsers and verify PWA install prompt is shown."
+      },
+      {
+        "type": "action",
+        "description": "Install the app."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the app launches correctly as an installed PWA."
+      },
+      {
+        "type": "action",
+        "description": "Simulate going offline."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the app remains functional with cached content and allows navigation."
+      },
+      {
+        "type": "action",
+        "description": "Reconnect to the internet."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm data is synchronized and updates correctly."
+      }
+    ]
+  },
+  {
+    "id": "TC016",
+    "title": "File Upload for Media Management",
+    "description": "Verify file uploads for product and ad images function correctly with progress indication, storage, and preview.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the ad creation or product edit page."
+      },
+      {
+        "type": "action",
+        "description": "Select image files to upload."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify upload progress indicators appear."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm images are successfully uploaded and previewed."
+      },
+      {
+        "type": "action",
+        "description": "Submit the form."
+      },
+      {
+        "type": "assertion",
+        "description": "Check uploaded media is saved and associated correctly."
+      }
+    ]
+  },
+  {
+    "id": "TC017",
+    "title": "Error Handling for Invalid UUID User IDs",
+    "description": "Ensure system rejects and handles invalid UUIDs gracefully to prevent errors and consistency issues.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Attempt to create a user/session with a timestamp or invalid UUID format."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify system rejects invalid UUIDs with an appropriate error and no database corruption."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm error messages are user-friendly and consistent."
+      }
+    ]
+  },
+  {
+    "id": "TC018",
+    "title": "System Stability on Localhost Development Server",
+    "description": "Confirm the system runs without runtime errors or debug logs on the local development server at http://localhost:8081/.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Start the local development server on port 8081."
+      },
+      {
+        "type": "assertion",
+        "description": "Open the application URL and navigate through all major flows."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify there are no runtime errors in console and no debug logs remain."
+      }
+    ]
+  },
+  {
+    "id": "TC019",
+    "title": "Geolocation Service Functionality",
+    "description": "Test geolocation access requests and usage of location data for services correctly with fallbacks and permission handling.",
+    "category": "functional",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Access feature requiring geolocation."
+      },
+      {
+        "type": "action",
+        "description": "Grant permission to access location."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify location-based services function and data is fetched accordingly."
+      },
+      {
+        "type": "action",
+        "description": "Deny location permission and reload feature."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm appropriate fallback mechanisms and messaging."
+      }
+    ]
+  }
+]

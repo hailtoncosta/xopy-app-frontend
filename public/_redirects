@@ -1,0 +1,10 @@
+/manifest.json           /manifest.json           200
+/manifest.webmanifest     /manifest.webmanifest     200
+/sw.js                   /sw.js                   200
+/locacao/*               /index.html              200
+/categoria/*             /index.html              200
+/produtos/*              /index.html              200
+/servicos/*              /index.html              200
+/ofertas/*               /index.html              200
+/profile/*               /index.html              200
+/*                       /index.html              200

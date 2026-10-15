@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import ts from 'typescript';
+let source=readFileSync(new URL('../src/services/rentalCompaniesService.ts',import.meta.url),'utf8').replace(/^import .*;\n/,'const {request,springClient}=globalThis.companyTestApi;\n');
+const profiles=[{id:'a',full_name:'Responsável',user_type:'customer',email:'a@example.com'},{id:'b',full_name:'Empresa registrada',user_type:'rental_company'}];
+const products=[{user_id:'a',seller_type:'business',product_type:'rental',seller_info:{businessName:'Empresa real',businessCity:'São Luís'}},{user_id:'a',seller_type:'business',product_type:'rental',seller_info:{businessName:'Cadastro anterior'}},{user_id:'deleted',seller_type:'business',product_type:'rental',seller_info:{businessName:'Conta excluída'}}];
+let failure='Falha HTTP 404',calls=0;
+globalThis.companyTestApi={request:async()=>{throw new Error(failure);},springClient:{from(table){calls++;const query={select(){return query;},order(){return query;},range(){return Promise.resolve({data:table==='products'?products:profiles,count:table==='products'?products.length:profiles.length,error:null});}};return query;}}};
+const js=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
+const api=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
+const rows=await api.getRentalCompanies();assert.equal(rows.length,2);assert.equal(rows.find(row=>row.id==='a').name,'Empresa real');assert.equal(rows.find(row=>row.id==='a').city,'São Luís');assert.equal(rows[0].rating,null);assert.equal(api.mergeRentalCompanies([],[]).length,0);
+failure='Falha HTTP 403';calls=0;await assert.rejects(api.getRentalCompanies(),/403/);assert.equal(calls,0);
+console.log('Endpoint ausente, deduplicação, contas excluídas, dados empresariais e acesso negado verificados.');

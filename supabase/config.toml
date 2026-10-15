@@ -1,0 +1,23 @@
+project_id = "gpbepsinnvatubokfgvr"
+
+[functions.mp-create-payment]
+verify_jwt = false
+
+[functions.mp-oauth-callback]
+verify_jwt = false
+
+[functions.mp-refresh-token]
+verify_jwt = false
+
+[functions.mp-save-token]
+verify_jwt = false
+
+[functions.push-notify]
+verify_jwt = false
+
+[functions.vapid-public-key]
+verify_jwt = false
+
+[functions.chat-send-message]
+verify_jwt = false
+

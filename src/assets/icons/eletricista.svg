@@ -1,0 +1,17 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Raio principal -->
+  <path d="M256 32L320 192H288L352 320H224L288 192H256L192 64H256V32Z" fill="currentColor"/>
+  <!-- Fios elétricos -->
+  <path d="M96 128C96 110.327 110.327 96 128 96H160C177.673 96 192 110.327 192 128V160C192 177.673 177.673 192 160 192H128C110.327 192 96 177.673 96 160V128Z" fill="currentColor"/>
+  <path d="M320 128C320 110.327 334.327 96 352 96H384C401.673 96 416 110.327 416 128V160C416 177.673 401.673 192 384 192H352C334.327 192 320 177.673 320 160V128Z" fill="currentColor"/>
+  <!-- Tomada/plugue -->
+  <path d="M64 384C64 366.327 78.3269 352 96 352H160C177.673 352 192 366.327 192 384V448C192 465.673 177.673 480 160 480H96C78.3269 480 64 465.673 64 448V384Z" fill="currentColor"/>
+  <path d="M320 384C320 366.327 334.327 352 352 352H416C433.673 352 448 366.327 448 384V448C448 465.673 433.673 480 416 480H352C334.327 480 320 465.673 320 448V384Z" fill="currentColor"/>
+  <!-- Conectores -->
+  <circle cx="128" cy="416" r="16" fill="white"/>
+  <circle cx="384" cy="416" r="16" fill="white"/>
+  <!-- Fios conectores -->
+  <path d="M192 416H320" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+  <path d="M144 192V352" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+  <path d="M368 192V352" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,27 @@
+export { default as LocationSection } from './LocationSection';
+export { default as BannerCarousel } from './BannerCarousel';
+export { default as PromotionalSection } from './PromotionalSection';
+export { default as CategoryChips } from './CategoryChips';
+export { default as ProductCatalog } from './ProductCatalog';
+export { default as ProductSection } from './ProductSection';
+export { default as NewsBanner } from './NewsBanner';
+export { default as ServiceCategories } from './ServiceCategories';
+export { default as PromoBanner } from './PromoBanner';
+export { default as FeaturedProducts } from './FeaturedProducts';
+export { default as PromotionalBanner } from './PromotionalBanner';
+export { default as StoreCard } from './StoreCard';
+export { default as ClipsSection } from './ClipsSection';
+export { default as PaintSection } from './PaintSection';
+export { default as TilesSection } from './TilesSection';
+export { default as DecorationSection } from './DecorationSection';
+export { default as TopChoicesSection } from './TopChoicesSection';
+export { default as EssentialProductsSection } from './EssentialProductsSection';
+export { default as ElectroSection } from './ElectroSection';
+export { RentalSection } from './RentalSection';
+
+export type { Banner } from './BannerCarousel';
+export type { PromotionalItem } from './PromotionalSection';
+export type { Category } from './CategoryChips';
+export type { ServiceCategory } from './ServiceCategories';
+export type { PromotionalBannerData } from './PromotionalBanner';
+export type { StoreData } from './StoreCard';

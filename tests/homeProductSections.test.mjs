@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import ts from 'typescript';
+const source=readFileSync(new URL('../src/lib/homeProductSections.ts',import.meta.url),'utf8');
+const js=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
+const {buildHomeProductSections:build}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
+assert.ok(Object.values(build([],[])).every(rows=>rows.length===0));
+const original={id:'1',title:'Tinta cadastrada',price:120,status:'active',approval_status:'approved',category:'Pintura',is_featured:true};
+const dynamic={id:7,source_product_id:'1',name:'Nome antigo',price:'R$ 90,00',is_active:true,is_featured:true,product_group:'paint'};
+const sections=build([dynamic],[original]);
+assert.equal(sections.featured.length,1);assert.equal(sections.paint[0].name,'Tinta cadastrada');assert.equal(sections.paint[0].price,'R$ 120,00');assert.equal(sections.top.length,0);
+assert.equal(build([dynamic],[{...original,approval_status:'pending'}]).featured.length,0);
+assert.equal(build([dynamic],[{...original,product_type:'rental'}]).featured.length,0);
+assert.equal(build([{id:4,name:'Telha',is_active:false,product_group:'tiles'}],[]).tiles.length,0);
+assert.equal(build([{id:4,name:'Telha',price:'R$ 20,00',is_active:true,product_group:'tiles'}],[]).tiles.length,1);
+console.log('Verificações de catálogo vazio, moderação, locação, duplicação, preço e categorias passaram.');

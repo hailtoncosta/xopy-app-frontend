@@ -1,0 +1,27 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Vaso de planta -->
+  <path d="M160 320L192 480H320L352 320H160Z" fill="currentColor"/>
+  <!-- Base do vaso -->
+  <ellipse cx="256" cy="480" rx="80" ry="16" fill="currentColor"/>
+  <!-- Planta principal -->
+  <path d="M256 320C256 280 280 240 320 220C340 210 360 220 360 240C360 260 340 280 320 300C300 320 280 320 256 320Z" fill="currentColor"/>
+  <path d="M256 320C256 280 232 240 192 220C172 210 152 220 152 240C152 260 172 280 192 300C212 320 232 320 256 320Z" fill="currentColor"/>
+  <!-- Folhas menores -->
+  <path d="M256 280C276 260 296 250 316 260C326 265 326 275 316 280C296 290 276 290 256 280Z" fill="currentColor"/>
+  <path d="M256 280C236 260 216 250 196 260C186 265 186 275 196 280C216 290 236 290 256 280Z" fill="currentColor"/>
+  <!-- Caule -->
+  <rect x="248" y="280" width="16" height="40" fill="currentColor"/>
+  <!-- Ferramentas de jardinagem -->
+  <path d="M96 128L128 96L160 128L128 160L96 128Z" fill="currentColor"/>
+  <rect x="120" y="160" width="16" height="80" fill="currentColor"/>
+  <!-- Regador -->
+  <ellipse cx="400" cy="160" rx="48" ry="24" fill="currentColor"/>
+  <rect x="352" y="148" width="32" height="24" fill="currentColor"/>
+  <path d="M384 148L384 128L400 128L400 148" fill="currentColor"/>
+  <!-- Gotas de água -->
+  <circle cx="380" cy="200" r="4" fill="currentColor"/>
+  <circle cx="390" cy="220" r="3" fill="currentColor"/>
+  <circle cx="370" cy="210" r="3" fill="currentColor"/>
+  <!-- Solo/terra -->
+  <ellipse cx="256" cy="320" rx="120" ry="16" fill="currentColor" opacity="0.3"/>
+</svg>

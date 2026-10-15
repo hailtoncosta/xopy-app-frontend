@@ -1,0 +1,15 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64 128C64 92.6538 92.6538 64 128 64H192C227.346 64 256 92.6538 256 128V192C256 227.346 227.346 256 192 256H128C92.6538 256 64 227.346 64 192V128Z" fill="currentColor"/>
+  <path d="M256 128H384V160H256V128Z" fill="currentColor"/>
+  <path d="M384 96H448V192H384V96Z" fill="currentColor"/>
+  <path d="M384 192H448V256C448 291.346 419.346 320 384 320V192Z" fill="currentColor"/>
+  <path d="M320 320H384V384H320V320Z" fill="currentColor"/>
+  <path d="M256 384H320V448H256V384Z" fill="currentColor"/>
+  <path d="M192 448H256V512H192V448Z" fill="currentColor"/>
+  <path d="M128 384H192V448H128V384Z" fill="currentColor"/>
+  <path d="M64 320H128V384H64V320Z" fill="currentColor"/>
+  <path d="M32 256H96V320H32V256Z" fill="currentColor"/>
+  <circle cx="160" cy="160" r="24" fill="white"/>
+  <circle cx="352" cy="144" r="16" fill="white"/>
+  <path d="M200 350C210 340 220 350 230 360C240 370 250 360 260 350" stroke="currentColor" stroke-width="8" fill="none"/>
+</svg>

@@ -1,0 +1,342 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Utility classes */
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Xopy Brand Colors */
+    --background: 0 0% 99%;
+    --foreground: 0 0% 1%;
+
+    --card: 0 0% 99%;
+    --card-foreground: 0 0% 1%;
+
+    --popover: 0 0% 99%;
+    --popover-foreground: 0 0% 1%;
+
+    --primary: 16 90% 46%;
+    --primary-foreground: 0 0% 99%;
+
+    --secondary: 20 78% 58%;
+    --secondary-foreground: 0 0% 1%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 16 90% 96%;
+    --accent-foreground: 16 90% 46%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 99%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 94%;
+    --ring: 16 90% 46%;
+
+    /* Xopy Brand Palette */
+    --orange-xopy: 16 90% 46%;           /* #e64c03 - Laranja Xopy */
+    --grafite: 0 0% 11%;                 /* #1c1c1c - Grafite */
+    --branco-neve: 0 0% 99%;             /* #fefefe - Branco Neve */
+    --cinza-concreto: 0 0% 95%;          /* #f2f2f2 - Cinza Concreto */
+    --verde-seguranca: 145 63% 49%;      /* #2ecc71 - Verde Segurança */
+    --azul-projeto: 204 70% 53%;         /* #3498db - Azul Projeto */
+    --amarelo-obra: 48 89% 60%;          /* #f1c40f - Amarelo Obra */
+    
+    /* Legacy colors for compatibility */
+    --orange-primary: 16 90% 46%;
+    --orange-secondary: 20 78% 58%;
+    --orange-light: 16 90% 96%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(16 90% 46%), hsl(20 78% 58%));
+    --gradient-light: linear-gradient(135deg, hsl(16 90% 96%), hsl(0 0% 99%));
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 8px hsl(16 90% 46% / 0.1);
+    --shadow-medium: 0 4px 16px hsl(16 90% 46% / 0.15);
+    --shadow-strong: 0 8px 32px hsl(16 90% 46% / 0.2);
+    --shadow-glow: 0 0 20px hsl(16 90% 46% / 0.3);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  /* Force light theme for auth pages */
+  .light {
+    color-scheme: light;
+  }
+  
+  .light * {
+    color-scheme: light;
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground)) transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted-foreground));
+    border-radius: 20px;
+  }
+  
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Banner Carousel Loading Styles */
+  .banner-carousel-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    background: linear-gradient(135deg, hsl(16 90% 96%), hsl(0 0% 99%));
+    border-radius: 0.75rem;
+    padding: 2rem;
+  }
+
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid hsl(0 0% 90%);
+    border-top: 3px solid hsl(16 90% 46%);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .banner-carousel-loading p {
+    color: hsl(0 0% 40%);
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .banner-carousel-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    background: hsl(0 0% 96%);
+    border-radius: 0.75rem;
+    border: 2px dashed hsl(0 0% 80%);
+  }
+
+  .banner-carousel-placeholder p {
+    color: hsl(0 0% 50%);
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+@layer base {
+  html, body, #root { width: 100%; min-width: 0; margin: 0; }
+  img, video, canvas { max-width: 100%; }
+  input, textarea, select { min-width: 0; }
+  main { min-width: 0; }
+  @media (max-width: 639px) {
+    input, textarea, select { font-size: 16px; }
+    header.fixed:has(form) + main { padding-top: 104px; }
+    [role="dialog"] { max-width: calc(100vw - 2rem); max-height: calc(100dvh - 2rem); overflow-y: auto; }
+    .fixed.inset-0 > .bg-white { max-height: calc(100dvh - 2rem); overflow-y: auto; }
+  }
+  .fixed.bottom-0 { padding-bottom: env(safe-area-inset-bottom, 0px); }
+}
+
+/* Rolagem visível nas listas de imagens, inclusive com mouse e teclado. */
+.image-scroll { scrollbar-width: thin; scrollbar-color: #ea580c #e5e7eb; }
+.image-scroll::-webkit-scrollbar { height: 8px; }
+.image-scroll::-webkit-scrollbar-track { background: #e5e7eb; border-radius: 999px; }
+.image-scroll::-webkit-scrollbar-thumb { background: #ea580c; border-radius: 999px; }
+
+@layer components {
+  .carousel-arrow {
+    @apply absolute z-10 flex h-11 w-11 sm:h-12 sm:w-12 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white text-white;
+    background: linear-gradient(145deg, rgb(251 146 60 / 45%), rgb(234 88 12 / 45%) 60%, rgb(194 65 12 / 45%));
+    border-color: rgb(255 255 255 / 55%);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0 4px 14px rgb(154 52 18 / 18%), inset 0 1px 0 rgb(255 255 255 / 35%);
+    transition: box-shadow 180ms ease, scale 180ms ease, filter 180ms ease;
+  }
+  .carousel-arrow:hover { scale: 1.08; filter: brightness(1.06); box-shadow: 0 6px 18px rgb(154 52 18 / 25%); }
+  .carousel-arrow:active { scale: 0.95; }
+  .carousel-arrow:focus-visible { outline: 3px solid #9a3412; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { .carousel-arrow { transition: none; } }
+}
+
+@layer components {
+  .carousel-arrow--compact { width: 32px; height: 32px; border-width: 1px; }
+  .carousel-arrow--compact svg { width: 20px; height: 20px; }
+}
+
+@layer components {
+  .profile-dropdown {
+    background-image: linear-gradient(145deg, rgb(251 146 60 / 30%), rgb(194 65 12 / 25%));
+    scrollbar-width: thin;
+    scrollbar-color: rgb(255 255 255 / 55%) transparent;
+  }
+  .profile-dropdown::-webkit-scrollbar { width: 5px; }
+  .profile-dropdown::-webkit-scrollbar-thumb { background: rgb(255 255 255 / 55%); border-radius: 999px; }
+}
+
+/* Shared translucent orange feedback surface; icons distinguish message types. */
+[data-sonner-toaster].xopy-feedback { z-index: 300; }
+.xopy-feedback [data-sonner-toast].xopy-toast {
+  --feedback-accent: #fff;
+  border: 1px solid rgb(255 255 255 / 40%);
+  border-left: 4px solid rgb(255 255 255 / 80%);
+  border-radius: 18px;
+  background: rgb(234 88 12 / 40%);
+  color: #fff;
+  padding: 18px 40px 18px 16px;
+  box-shadow: 0 12px 36px rgb(154 52 18 / 18%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  gap: 12px;
+}
+.xopy-feedback [data-icon] { color: #fff; }
+.xopy-feedback [data-title] { font-size: 14px; font-weight: 600; line-height: 1.45; }
+.xopy-feedback [data-description] { color: rgb(255 255 255 / 95%); font-size: 13px; line-height: 1.5; }
+.xopy-feedback [data-close-button] {
+ left: auto; right: 9px; top: 9px; transform: none;
+ background: rgb(255 255 255 / 15%); color: #fff; border: 1px solid rgb(255 255 255 / 30%);
+ width: 25px; height: 25px; border-radius: 8px;
+}
+.xopy-feedback [data-close-button]:hover { background: rgb(255 255 255 / 30%); color: #fff; }
+.xopy-feedback [data-close-button]:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.xopy-feedback [data-button] { border-radius: 9px; background: rgb(255 255 255 / 20%); color: #fff; }
+.xopy-feedback[data-theme=dark] [data-sonner-toast].xopy-toast { background: rgb(234 88 12 / 40%); color: #fff; }
+@media (prefers-reduced-motion: reduce) {
+ [data-sonner-toast], [role=alertdialog], [data-radix-popper-content-wrapper] { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* The same surface also applies to persistent notices and compatibility toasts. */
+.xopy-floating-notice {
+ background: rgb(234 88 12 / 40%);
+ color: #fff;
+ border: 1px solid rgb(255 255 255 / 40%);
+ border-left: 4px solid rgb(255 255 255 / 80%);
+ border-radius: 18px;
+ box-shadow: 0 12px 36px rgb(154 52 18 / 18%);
+ backdrop-filter: blur(16px);
+ -webkit-backdrop-filter: blur(16px);
+}
+.xopy-floating-notice .xopy-notice-close { color: #fff; opacity: 1; }

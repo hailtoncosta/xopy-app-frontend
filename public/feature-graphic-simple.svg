@@ -1,0 +1,30 @@
+<svg width="1024" height="500" viewBox="0 0 1024 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Solid Orange Background -->
+  <rect width="1024" height="500" fill="#ea580c"/>
+  
+  <!-- Content Container -->
+  <g transform="translate(512, 250)">
+    <!-- Logo Circle -->
+    <circle cx="-250" cy="0" r="85" fill="#ffffff"/>
+    
+    <!-- XOPY Text in Circle -->
+    <text x="-250" y="8" font-family="Arial, sans-serif" font-size="62" font-weight="900" fill="#ea580c" text-anchor="middle" dominant-baseline="middle">
+      XOPY
+    </text>
+    
+    <!-- Main Text -->
+    <g transform="translate(-100, -60)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="52" font-weight="900" fill="#ffffff">
+        Marketplace da Construção Civil
+      </text>
+      
+      <text x="0" y="70" font-family="Arial, sans-serif" font-size="30" font-weight="600" fill="#ffffff" opacity="0.95">
+        Materiais • Serviços • Profissionais
+      </text>
+      
+      <text x="0" y="115" font-family="Arial, sans-serif" font-size="24" font-weight="500" fill="#ffffff" opacity="0.9">
+        Tudo para sua obra em um só lugar
+      </text>
+    </g>
+  </g>
+</svg>

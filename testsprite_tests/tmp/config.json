@@ -1,0 +1,16 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:8080",
+  "executionArgs": {
+    "projectName": "xopy-build-hub",
+    "projectPath": "C:\\Users\\USUARIO\\Downloads\\xopy\\xopy-build-hub",
+    "testIds": [],
+    "additionalInstruction": "Testar especialmente a navegação do botão 'Mais' que agora abre o MoreModal, e verificar se a página MyAds está acessível através do modal. Focar nos testes de navegação e funcionalidades corrigidas.",
+    "envs": {
+      "API_KEY": "sk-user-tuwMkaaJgdJNvk9kgfhmsxnPBdvpyvVgfqq6JmttDZ9uJEB9ypc0NT1FAXD_8hOY-u6Ms_Y9p71cyAt4gH37L6iUr7f54QU5l9f7LZBmcObcUXAfkmtzC4RJcRKcENe2j4Q"
+    }
+  },
+  "proxy": "http://4101a70b-c86f-4cc1-9016-f1690552a739:ZH6Nq94omVot20qlB6ntuOITzqwY0wZU@tun.testsprite.com:8080"
+}

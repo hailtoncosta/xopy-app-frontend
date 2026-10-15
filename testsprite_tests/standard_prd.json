@@ -1,0 +1,248 @@
+{
+  "meta": {
+    "project": "ErrodeBuild E-commerce & Rental Platform",
+    "date": "2025-09-13",
+    "prepared_by": "Software Development Manager"
+  },
+  "product_overview": "ErrodeBuild is a comprehensive e-commerce and rental platform that offers users the ability to browse, rent, and purchase products through an intuitive web interface. It supports user and admin roles with advanced product management, real-time chat, dynamic content, and a progressive web app experience.",
+  "core_goals": [
+    "Provide seamless product browsing with detailed views and categorized search filters.",
+    "Enable users to manage rentals and purchases with integrated shopping cart and checkout processes.",
+    "Support robust authentication and session management for users, admins, and service providers.",
+    "Allow users to create, edit, and manage their own advertisements for both sales and rentals.",
+    "Deliver a dynamic content management system that updates banners, categories, and products from backend services.",
+    "Offer a comprehensive admin panel for managing products, users, orders, content, and analytics.",
+    "Implement real-time conversation features to facilitate communication between users.",
+    "Ensure responsive theme support and offline capabilities via PWA technology."
+  ],
+  "key_features": [
+    "Complete authentication system with user and admin login, registration, and session management using Supabase.",
+    "Product catalog with categories, search, favorites, and detailed product views.",
+    "Shopping cart functionality with checkout process and order management.",
+    "Equipment and tool rental system with categories and detailed rental views.",
+    "User ads management allowing creation, editing, deletion, and oversight of product and rental ads.",
+    "Dynamic content loading for banners, categories, and products from Supabase with fallback to static data.",
+    "Administrative dashboard covering products, users, orders, banners, settings, and analytics.",
+    "Real-time chat system enabling direct messaging between users.",
+    "User profile and settings management including addresses, payment methods, and notifications.",
+    "Search functionality with filters, favorites management, and support for dark/light themes.",
+    "Progressive Web App features with offline support, installation prompts, and geolocation services.",
+    "File upload system for media management and UI component library for consistent interface design.",
+    "UUID-based unique identifier generation for improved reliability and database consistency."
+  ],
+  "user_flow_summary": [
+    "User registration and login through secured authentication system; session management ensures persistent login.",
+    "Browsing products and rentals by category with search and filter options to easily find items.",
+    "Adding products or rentals to the shopping cart, proceeding through checkout, and order confirmation processes.",
+    "Users managing their own advertisements for rentals or sales, including creation, editing, and deletion flows.",
+    "Admins accessing the dashboard to manage products, users, orders, banners, and content with analytics.",
+    "Using the real-time chat system to communicate with other users directly within the platform.",
+    "Managing user profile settings, including editing personal information, addresses, payment methods, and notifications.",
+    "Interacting with dynamic banners and promotions that update based on backend data or static fallback content.",
+    "Utilizing the PWA features to install the app and use it offline with theme toggling for dark/light preferences."
+  ],
+  "validation_criteria": [
+    "Authentication system properly generates and uses UUIDs instead of timestamps for user IDs, eliminating invalid UUID errors.",
+    "All product and rental operations (create, view, edit, delete) execute without server errors or data inconsistency.",
+    "Admin panel features allow full CRUD operations on products, users, orders, banners, and settings with corresponding UI updates.",
+    "Real-time chat messages are sent and received instantly with proper storage and retrieval.",
+    "Dynamic content loads correctly from Supabase, falling back to static data when necessary.",
+    "Shopping cart and checkout flows complete successfully with accurate order creation and updates.",
+    "User profile updates reflect correctly across the system including addresses and payment info.",
+    "PWA features function correctly including offline mode, install prompts, and theme switching.",
+    "All code changes adhere to code quality standards with no debug logs remaining and correct syntax.",
+    "System runs without runtime errors on local development server at http://localhost:8081/."
+  ],
+  "code_summary": {
+    "tech_stack": [
+      "TypeScript",
+      "React 18",
+      "Vite",
+      "React Router DOM",
+      "Supabase",
+      "TailwindCSS",
+      "Radix UI",
+      "React Query (TanStack)",
+      "React Hook Form",
+      "Zod",
+      "Lucide React",
+      "PWA (Progressive Web App)",
+      "Embla Carousel",
+      "Recharts",
+      "Next Themes",
+      "Sonner (Toast)"
+    ],
+    "features": [
+      {
+        "name": "Authentication System",
+        "description": "Complete authentication system with user and admin login, registration, and session management using Supabase",
+        "files": [
+          "src/contexts/AuthContext.tsx",
+          "src/contexts/AdminAuthContext.tsx",
+          "src/services/authService.ts",
+          "src/pages/Auth.tsx",
+          "src/pages/admin/AdminLogin.tsx"
+        ]
+      },
+      {
+        "name": "Product Management",
+        "description": "Product catalog with categories, search, favorites, and detailed product views",
+        "files": [
+          "src/pages/ProductCategory.tsx",
+          "src/pages/ProductDetail.tsx",
+          "src/services/productService.ts",
+          "src/types/index.ts"
+        ]
+      },
+      {
+        "name": "Shopping Cart & Checkout",
+        "description": "Shopping cart functionality with checkout process and order management",
+        "files": [
+          "src/pages/Cart.tsx",
+          "src/pages/Checkout.tsx",
+          "src/pages/CheckoutDireto.tsx",
+          "src/pages/Orders.tsx"
+        ]
+      },
+      {
+        "name": "Rental System",
+        "description": "Equipment and tool rental system with categories and detailed rental views",
+        "files": [
+          "src/pages/RentalCategory.tsx",
+          "src/pages/RentalDetail.tsx"
+        ]
+      },
+      {
+        "name": "User Ads Management",
+        "description": "User can create, edit, delete and manage their own product/rental advertisements",
+        "files": [
+          "src/pages/MyAds.tsx"
+        ]
+      },
+      {
+        "name": "Dynamic Content Management",
+        "description": "Dynamic banners, categories, and products loaded from Supabase with fallback to static data",
+        "files": [
+          "src/services/contentService.ts",
+          "src/hooks/useContentData.ts",
+          "src/components/home/BannerCarousel.tsx"
+        ]
+      },
+      {
+        "name": "Admin Panel",
+        "description": "Complete admin dashboard for managing products, users, orders, banners, and content",
+        "files": [
+          "src/pages/admin/AdminDashboard.tsx",
+          "src/pages/admin/ProductsList.tsx",
+          "src/pages/admin/AddProduct.tsx",
+          "src/pages/admin/Categories.tsx",
+          "src/pages/admin/Banners.tsx",
+          "src/pages/admin/BannerEditor.tsx",
+          "src/pages/admin/Users.tsx",
+          "src/pages/admin/OrdersAdmin.tsx",
+          "src/pages/admin/Analytics.tsx",
+          "src/pages/admin/SettingsAdmin.tsx"
+        ]
+      },
+      {
+        "name": "Service Providers",
+        "description": "Service provider management and authentication system",
+        "files": [
+          "src/pages/ServiceProviders.tsx",
+          "src/pages/admin/ServiceProviders.tsx",
+          "src/services/serviceProviderService.ts",
+          "src/services/serviceProviderAuthService.ts"
+        ]
+      },
+      {
+        "name": "Chat System",
+        "description": "Real-time messaging system for user conversations",
+        "files": [
+          "src/pages/Conversations.tsx",
+          "src/services/chatService.ts",
+          "src/components/chat"
+        ]
+      },
+      {
+        "name": "User Profile & Settings",
+        "description": "User profile management, settings, addresses, payment methods, and notifications",
+        "files": [
+          "src/pages/Profile.tsx",
+          "src/pages/Settings.tsx",
+          "src/pages/Addresses.tsx",
+          "src/pages/PaymentMethods.tsx",
+          "src/pages/Notifications.tsx"
+        ]
+      },
+      {
+        "name": "Search & Filters",
+        "description": "Product search functionality with filters and results display",
+        "files": [
+          "src/pages/SearchResults.tsx"
+        ]
+      },
+      {
+        "name": "Favorites System",
+        "description": "User favorites management with context provider",
+        "files": [
+          "src/pages/Favorites.tsx",
+          "src/contexts/FavoritesContext.tsx"
+        ]
+      },
+      {
+        "name": "Theme System",
+        "description": "Dark/light theme support with context provider",
+        "files": [
+          "src/contexts/ThemeContext.tsx"
+        ]
+      },
+      {
+        "name": "PWA Features",
+        "description": "Progressive Web App functionality with install prompts and offline support",
+        "files": [
+          "src/components/PWAInstallPrompt.tsx",
+          "src/components/PWAStatus.tsx",
+          "src/hooks/usePWA.ts"
+        ]
+      },
+      {
+        "name": "Geolocation Services",
+        "description": "Location-based services and geocoding functionality",
+        "files": [
+          "src/hooks/useGeolocation.ts",
+          "src/services/geocodingService.ts"
+        ]
+      },
+      {
+        "name": "File Upload System",
+        "description": "File upload service for images and media management",
+        "files": [
+          "src/services/uploadService.ts",
+          "src/pages/admin/Media.tsx"
+        ]
+      },
+      {
+        "name": "UI Components Library",
+        "description": "Comprehensive UI component library built with Radix UI and custom components",
+        "files": [
+          "src/components/ui",
+          "src/components/header",
+          "src/components/layout",
+          "src/components/modals",
+          "src/components/home"
+        ]
+      },
+      {
+        "name": "Data Management",
+        "description": "Static data files for fallback content including banners, categories, and products",
+        "files": [
+          "src/data/banners.ts",
+          "src/data/categories.ts",
+          "src/data/products.ts",
+          "src/data/promotions.ts",
+          "src/data/serviceCategories.ts"
+        ]
+      }
+    ]
+  }
+}

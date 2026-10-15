@@ -1,0 +1,129 @@
+{
+  "tech_stack": [
+    "TypeScript",
+    "React 18",
+    "Vite",
+    "Supabase",
+    "TailwindCSS",
+    "React Router",
+    "React Query",
+    "Zod",
+    "Radix UI",
+    "Lucide Icons",
+    "PWA"
+  ],
+  "features": [
+    {
+      "name": "Authentication System",
+      "description": "Complete user authentication with login, register, guest mode, and profile management",
+      "files": [
+        "src/contexts/AuthContext.tsx",
+        "src/hooks/useAuth.ts",
+        "src/pages/Auth.tsx",
+        "src/pages/Profile.tsx",
+        "src/services/authService.ts"
+      ]
+    },
+    {
+      "name": "Product Management",
+      "description": "Product catalog, categories, details, and shopping cart functionality",
+      "files": [
+        "src/pages/ProductCategory.tsx",
+        "src/pages/ProductDetail.tsx",
+        "src/pages/Cart.tsx",
+        "src/services/productService.ts",
+        "src/components/home/ProductSection.tsx"
+      ]
+    },
+    {
+      "name": "User Ads Management",
+      "description": "Users can create, edit, delete and manage their product advertisements",
+      "files": [
+        "src/pages/MyAds.tsx",
+        "src/components/modals/MoreModal.tsx"
+      ]
+    },
+    {
+      "name": "Rental System",
+      "description": "Equipment rental functionality with categories and detailed views",
+      "files": [
+        "src/pages/RentalCategory.tsx",
+        "src/pages/RentalDetail.tsx",
+        "src/data/rentalItems.ts"
+      ]
+    },
+    {
+      "name": "Admin Panel",
+      "description": "Complete admin dashboard for managing products, users, banners, and content",
+      "files": [
+        "src/pages/admin/AdminDashboard.tsx",
+        "src/pages/admin/ProductsList.tsx",
+        "src/pages/admin/BannerEditor.tsx",
+        "src/contexts/AdminAuthContext.tsx"
+      ]
+    },
+    {
+      "name": "Dynamic Content Management",
+      "description": "Dynamic banners, categories, and content with Supabase integration",
+      "files": [
+        "src/services/contentService.ts",
+        "src/components/home/BannerCarousel.tsx",
+        "src/hooks/useContentData.ts"
+      ]
+    },
+    {
+      "name": "Navigation System",
+      "description": "Bottom navigation, header, and modal-based navigation with proper routing",
+      "files": [
+        "src/components/layout/BottomNavigation.tsx",
+        "src/components/layout/MainLayout.tsx",
+        "src/components/modals/MoreModal.tsx",
+        "src/App.tsx"
+      ]
+    },
+    {
+      "name": "Service Providers",
+      "description": "Service provider registration, authentication, and management system",
+      "files": [
+        "src/pages/ServiceProviders.tsx",
+        "src/hooks/useServiceProviderAuth.ts",
+        "src/services/serviceProviderService.ts"
+      ]
+    },
+    {
+      "name": "Chat System",
+      "description": "Real-time messaging between users and service providers",
+      "files": [
+        "src/pages/Conversations.tsx",
+        "src/services/chatService.ts",
+        "src/components/chat"
+      ]
+    },
+    {
+      "name": "Geolocation Services",
+      "description": "Location-based features and address management",
+      "files": [
+        "src/hooks/useGeolocation.ts",
+        "src/services/geocodingService.ts",
+        "src/pages/Addresses.tsx"
+      ]
+    },
+    {
+      "name": "Favorites System",
+      "description": "User favorites management with context and persistence",
+      "files": [
+        "src/contexts/FavoritesContext.tsx",
+        "src/pages/Favorites.tsx"
+      ]
+    },
+    {
+      "name": "PWA Features",
+      "description": "Progressive Web App capabilities with offline support",
+      "files": [
+        "src/components/PWAInstallPrompt.tsx",
+        "src/components/PWAStatus.tsx",
+        "src/hooks/usePWA.ts"
+      ]
+    }
+  ]
+}
